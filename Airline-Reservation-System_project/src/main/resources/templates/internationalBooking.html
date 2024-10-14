@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>International Booking</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Arial:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="#" th:href="@{/css/flight.css}" />
+</head>
+<body>
+ <!-----navbar----->
+    <nav class="d-flex justify-content-between navbar">
+        <div>
+            <ul class="menus">
+                <li class="nav-item dropdown">
+          		<a class="nav-link dropdown-toggle" th:href="@{/domesticFlight}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            	Book Ticket
+          		</a>
+          	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" th:href="@{/domesticFlight}">Domestic Flight</a></li>
+            <li><a class="dropdown-item" th:href="@{/internationalFlight}">International Flight</a></li>
+          </ul>
+        </li>
+            </ul>
+        </div>
+        <div class ="nav-head" th:onclick="|window.location.href='/'|">
+            <h3><span style="color: black;">Sha</span><b style="color: #007bff">Go</b></h3>
+        </div>
+        <div class="mt-3 d-flex button">
+            <button class="btn btn-dark m-1" th:onclick="|window.location.href='/login'|" >Login</button>
+        </div>   
+    </nav>
+    <!-----navbar----->
+	<div class="container">
+        <div class="booking-box">
+            <h2 style="color: #ffd700" class="stroke">Book International Flight Here</h2>
+
+            
+
+            <form id="flight-search-form" action="searchFlights" method="post">
+            
+	            <!-- <div class="radio-group">
+            		<label for="trip-type">Trip Type:</label>
+            		<div class="radio-box">
+                		<input type="radio" id="one-way" name="tripType" value="one-way" checked> One Way
+               	 		<input type="radio" id="round-trip" name="tripType" value="round-trip"> Round Trip
+            		</div>
+        		</div> -->
+            
+            <!-- Div for get From and To -->
+                <div class="input-box">
+                    <label for="origin">Origin</label>
+                    <select id="origin" name="origin" required>
+                        <option value="">Select Origin</option>
+                        <option value="India, MAA" selected="selected">India, MAA</option>
+                        <option value="China, PEK">China, PEK</option>
+                        <option value="United States , LAS">United States , LAS</option>
+                     </select>
+
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination" required>
+                        <option value="">Select Destination</option>
+                        <option value="Singapore, SIN">Singapore, SIN</option>
+                        <option value="Dubai, DXB">Dubai, DXB</option>
+                        <option value="Japan, NRT">Japan, NRT</option>
+                    </select>
+                </div>
+				<!-- From and To div ends here-->
+				
+				<!-- div for departure and return -->
+                <div class="input-box">
+                    <label for="departureDate">Departure date</label>
+                    <input type="date" id="departureDate" value="2024-10-11" name="departureDate" disabled="disabled">
+
+                    <!-- <div id="return-date-container" style="display: none;"> Initially hidden
+				        <label for="return">Return date</label>
+				        <input type="date" id="return" name="return">
+   					</div> -->
+                </div>
+				<!-- departure and return ends here-->
+
+                <!-- <div class="input-box">
+                    <label for="travellers">Travellers</label>
+                    <select id="travellers" name="travellers" required>
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                        <option value="5">5 Passengers</option>
+                    </select>
+
+                </div> -->
+
+                <button type="submit" class="submit-btn">Search</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- <!-- JavaScript Function for show return date if round-trip is selected -->
+    <script>
+        const roundTripRadio = document.getElementById('round-trip');
+        const oneWayRadio = document.getElementById('one-way');
+        const returnDateContainer = document.getElementById('return-date-container');
+
+        roundTripRadio.addEventListener('change', function() {
+            returnDateContainer.style.display = 'block';
+        });
+
+        oneWayRadio.addEventListener('change', function() {
+            returnDateContainer.style.display = 'none';
+        });
+    </script> -->
+</body>
+</html>

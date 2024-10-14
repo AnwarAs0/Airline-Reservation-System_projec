@@ -1,0 +1,98 @@
+body{
+	font-family: 'Arial', sans-serif;
+	background: #cad8e8;
+	margin: 0;
+	padding: 0;
+}
+
+.menus{
+	display: flex;
+	list-style: none;
+	column-gap: 30px;
+	margin-left: 10px;
+    margin-top: 25px;
+    font-weight: bold;
+    color: #343a40;
+}
+.button {
+    margin: 5px 50px;
+}
+.navbar {
+    background-color: #eff3f8;
+}
+.navbar h3{
+	margin-left: 50px;
+	width: 100px;
+}
+.nav-head{
+	cursor: pointer;
+}
+.container{
+	width: 50%;
+	margin: 50px auto;
+	text-align: center;
+}
+.booking-box{
+	margin: 20px auto;	
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.booking-box h2{
+	color: #007bff;
+	font-weight: bold;
+}
+.stroke {
+  filter: drop-shadow(3px 0 0 white) 
+  drop-shadow(0 2px 0 white)
+  drop-shadow(-2px 0 0 white) 
+  drop-shadow(0 -2px 0 white);
+}
+.radio-group{
+	display: flex;
+	justify-content: center;
+}
+.radio-box{
+	display: inline-block;
+	margin-right: 20px;
+}
+.radio-box input{
+	margin-right: 5px;	
+}
+.input-box{
+	display: flex;
+	justify-content: space-around;
+	margin: 15px 0;
+}
+.input-box select, input-box input{
+	width: 45%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 5px 5px;
+}
+.input-box label{
+	color: #000;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: left;
+	margin: 10px 5px;
+	align-items: center;
+}
+.submit-btn{
+	background-color: #007bff;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+.submit-btn:hover {
+	background-color: #0056b3;
+}
+
+
+
+
+

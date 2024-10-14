@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        .email-container {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+        .email-header {
+            background-color: #007bff;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+        }
+        .email-body {
+            margin: 20px 0;
+        }
+        .email-footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+        table {
+            width: 100%;
+            margin: 10px 0;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .success-message {
+            font-size: 16px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h2>Booking Confirmation</h2>
+        </div>
+
+        <div class="email-body">
+            <p class="success-message">Dear <strong th:text="${passenger.name}">Passenger Name</strong>,</p>
+            <p>Your booking has been successfully confirmed!</p>
+
+            <table>
+                <tr>
+                    <th>Flight Name</th>
+                    <td th:text="${flightName}">Flight Name</td>
+                </tr>
+                <tr>
+                    <th>Origin</th>
+                    <td th:text="${origin}">Origin</td>
+                </tr>
+                <tr>
+                    <th>Destination</th>
+                    <td th:text="${destination}">Destination</td>
+                </tr>
+                <tr>
+                    <th>Departure Date</th>
+                    <td th:text="${#dates.format(departureDate, 'yyyy-MM-dd HH:mm')}">Departure Date</td>
+                </tr>
+                <tr>
+                    <th>Passenger Name</th>
+                    <td th:text="${passenger.name}">Passenger Name</td>
+                </tr>
+                <tr>
+                    <th>Passenger Gender</th>
+                    <td th:text="${passenger.gender}">Passenger Gender</td>
+                </tr>
+                <tr>
+                    <th>Passenger Age</th>
+                    <td th:text="${passenger.age}">Passenger Age</td>
+                </tr>
+            </table>
+
+            <p>We wish you a pleasant journey!</p>
+        </div>
+
+        <div class="email-footer">
+            <p>This is an automated email. Please do not reply to this message.</p>
+        </div>
+    </div>
+</body>
+</html>
