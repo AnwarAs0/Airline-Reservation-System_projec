@@ -1,5 +1,3 @@
-﻿**PROJECT OVERVIEW**
-
 **Project Overview:** Airline Reservation System 
 
 **Project Title:** Airline Reservation System
