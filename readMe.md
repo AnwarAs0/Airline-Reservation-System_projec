@@ -14,7 +14,6 @@ The Airline Reservation System is designed to automate the process of booking, m
 1. **Passenger Management**: Personal details of passengers, including name, email, gender, age, and identification proof, are securely stored for booking purposes.
 1. **Email Confirmation**: After successful booking, users receive an automated email confirmation with all flight details.
 1. **Scalable Backend**: The system efficiently manages increasing user load by optimizing backend performance for smooth booking and retrieval of flight information.
-1. **Admin Module:** Airline administrators can manage flight details, schedules, and view bookings
 
 **Technologies Used:**
 
